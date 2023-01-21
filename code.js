@@ -1,4 +1,12 @@
-console.log('Wassup fuckers')
+/// getting all the variables
+
+const rockBtn = document.querySelector('.choices-container');
+console.log(rockBtn)
+
+
+
+
+/*console.log('Wassup fuckers')
 let number = [1,2,3]
 function getComputerChoice(){
     let val = number[Math.floor(Math.random() * number.length)]
@@ -8,8 +16,8 @@ function getComputerChoice(){
         return 'paper'
     else
         return 'scissors'
-}
-
+}*/
+/*
 // console.log(getComputerChoice())
 function playRound(playerSelection, computerSelection)
 {
@@ -70,3 +78,4 @@ function game(rounds){
 }
 
 game(5)
+*/

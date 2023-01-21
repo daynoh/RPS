@@ -4,12 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Josefin+Sans:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/bc55100a62.js" crossorigin="anonymous"></script>
     <script src = "code.js">
     </script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
     
 </head>
 <body>
-    
+    <div class="game-container">
+        <h1>Rock, Paper, Scisscors</h1>
+        <div class="choices-container">
+            <button class="btn rock">
+                <i class="fa-regular fa-hand-back-fist fa-4x"></i>
+            </button>
+            <button class="btn paper">
+                <i class="fa-regular fa-paper-plane fa-4x"></i>
+            </button>
+            <button class="btn scissors">
+                <i class="fa-regular fa-hand-scissors fa-4x"></i>
+            </button>
+
+        </div>
+
+        <div class="scores">
+            <h3 id="scores">Scores</h3>
+            <div class="values">
+                <div class="player-score">
+                    <h4>You</h4>
+                    <p>0</p>
+                </div>
+                
+                <div class="comp-score">
+                    <h4>Computer </h4>
+                    <p>0</p>
+                </div>
+                
+            </div>
+            
+            <div id="winner">
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
