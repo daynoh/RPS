@@ -1,13 +1,21 @@
 /// getting all the variables
 
-const rockBtn = document.querySelector('.choices-container');
-console.log(rockBtn)
+const rockBtn = document.querySelector('.btn.rock')
+const paperBtn = document.querySelector('.btn.paper');
+let scissorsBtn = document.querySelector('.btn.scissors');
 
 
+let playerScore = document.querySelector('.player-score').getElementsByTagName('p')[0];
+let compScore = document.querySelector('.comp-score').getElementsByTagName('p')[0];
 
+let playerSelection = "";
+let matches = 0;
 
-/*console.log('Wassup fuckers')
+// logic for the game
 let number = [1,2,3]
+
+
+/// getting the computers choice
 function getComputerChoice(){
     let val = number[Math.floor(Math.random() * number.length)]
     if (val == 1)
@@ -16,9 +24,8 @@ function getComputerChoice(){
         return 'paper'
     else
         return 'scissors'
-}*/
-/*
-// console.log(getComputerChoice())
+
+}
 function playRound(playerSelection, computerSelection)
 {
     console.log(playerSelection,computerSelection)
@@ -44,38 +51,61 @@ function playRound(playerSelection, computerSelection)
     }
     
 }
+let p_s = 0;
+let c_s = 0;
+rockBtn.addEventListener('click',function(){
 
-//const playerSel = 'rock';
-//console.log(playRound(playerSel,getComputerChoice()))
-
-function game(rounds){
-    let comp_score = 0;
-    let player_score = 0;
-    for (let i = 0; i < rounds; i++){
-        playerSelect = prompt('Choose your champion ')
-
-        val = playRound(playerSelect,getComputerChoice())
-        if (val == -1)
-            comp_score += 1;
-        if (val == 1)
-            player_score += 1;
-
-    if (player_score > comp_score)
-    {
-        console.log('you win')
-        console.log(i)
+    playerSelection = 'rock';
+    matches += 1;
+    let val = playRound(playerSelection,getComputerChoice())
+    if (val > 0){
+        p_s += 1
     }
-    else if (comp_score > player_score)
-    {
-        console.log('Computer wins')
+    else if(val < 0){
+        c_s += 1;
     }
-    else
-        console.log('Draw')
-
+    else{
+        p_s+=0;
     }
-    console.log('your score is ' + player_score)
+    playerScore.innerText =  p_s;
+    compScore.innerText = c_s;
 
-}
+})
 
-game(5)
-*/
+paperBtn.addEventListener('click',function(){
+    playerSelection = 'paper';
+    matches += 1;
+    
+    let val = playRound(playerSelection,getComputerChoice())
+    if (val > 0){
+        p_s += 1
+    }
+    else if(val < 0){
+        c_s += 1;
+    }
+    else{
+        p_s+=0;
+    }
+    playerScore.innerText =  p_s;
+    compScore.innerText = c_s;
+})
+
+scissorsBtn.addEventListener('click',function(){
+    playerSelection = 'scissors';
+    matches += 1;
+    let val = playRound(playerSelection,getComputerChoice())
+    if (val > 0){
+        p_s += 1
+    }
+    else if(val < 0){
+        c_s += 1;
+    }
+    else{
+        p_s+=0;
+    }
+    playerScore.innerText =  p_s;
+    compScore.innerText = c_s;
+})
+
+
+
